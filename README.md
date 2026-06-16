@@ -84,16 +84,6 @@ Dataset berisikan metrik kebugaran harian pengguna, terdiri dari data numerik da
 | Kesehatan Harian | `recovery_score` | numerik | Skor pemulihan tubuh |
 | **Target** | `vo2_max` | numerik | **Kapasitas maksimal oksigen (mL/kg/min)** |
 
-### EDA Findings
-
-> 📸 *[Tambahkan screenshot visualisasi EDA dari Colab di sini, misalnya: distribusi VO2 Max, heatmap korelasi, boxplot per workout_type]*
-
-Beberapa temuan utama dari eksplorasi data:
-
-- Fitur `avg_heart_rate`, `calories_burned`, dan `active_minutes` menunjukkan korelasi yang cukup signifikan terhadap nilai `vo2_max`.
-- Jenis olahraga (`workout_type`) HIIT dan Cardio cenderung menghasilkan nilai VO2 Max yang lebih tinggi dibandingkan Yoga dan Strength.
-- Distribusi `vo2_max` relatif normal, memudahkan proses regresi.
-
 ---
 
 ## 3. Data Preparation
@@ -123,7 +113,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 ```
 
 **4. Standardisasi**
-Seluruh fitur numerik distandarisasi menggunakan `StandardScaler`. Scaler di-fit **hanya pada data training** untuk menghindari data leakage, lalu di-transform ke kedua split. Scaler dan daftar kolom fitur kemudian diekspor sebagai file `.pkl` untuk keperluan deployment.
+Seluruh fitur numerik distandarisasi menggunakan `StandardScaler`. Scaler di-fit **hanya pada data training** untuk menghindari data leakage, lalu di-transform ke kedua split.
 
 ```python
 scaler = StandardScaler()
@@ -168,12 +158,12 @@ Hasil pengujian model terhadap data testing:
 
 ### Feature Importance
 
->  <img width="557" height="336" alt="image" src="https://github.com/user-attachments/assets/7c4035bb-f18e-483d-99c6-29f62f4dd0ca" />
+> <img width="557" height="336" alt="Cuplikan layar 2026-06-16 133605" src="https://github.com/user-attachments/assets/6cec2df7-b4ab-47b4-9bfb-1d94a6505d86" />
 
 
 ### Analisis Hasil
 
-Model menghasilkan tingkat kesalahan absolut rata-rata (MAE) sebesar **~7.75 mL/kg/min** dari nilai VO2 Max sebenarnya. Namun, nilai R² yang bernilai negatif (-0.0901) mengindikasikan bahwa model belum optimal dalam menangkap pola dari data — performa model masih di bawah baseline sederhana (mean prediction).
+Model menghasilkan tingkat kesalahan absolut rata-rata (MAE) sebesar **~7.75 mL/kg/min** dari nilai VO2 Max sebenarnya. Namun, nilai R² yang bernilai negatif (-0.0901) mengindikasikan bahwa model belum optimal dalam menangkap pola dari data.
 
 Beberapa langkah perbaikan yang dapat dilakukan pada pengembangan selanjutnya:
 
@@ -188,7 +178,9 @@ Beberapa langkah perbaikan yang dapat dilakukan pada pengembangan selanjutnya:
 
 Model telah di-deploy menggunakan **Streamlit** di environment **Hugging Face Spaces**. Aplikasi menerima input pengguna secara real-time, melakukan transformasi data di latar belakang menggunakan `vo2max_scaler.pkl` dan `feature_columns.pkl`, lalu langsung memberikan output estimasi VO2 Max.
 
-> <img width="931" height="373" alt="image" src="https://github.com/user-attachments/assets/75401120-451f-4701-8a3e-e4845baec4cf" />
+### Tampilan Aplikasi
+
+<img width="931" height="373" alt="Cuplikan layar 2026-06-16 133814" src="https://github.com/user-attachments/assets/31f8e5e0-3b3b-4298-8df0-5239a4ea200c" />
 
 
 ### Cara Menjalankan Lokal
