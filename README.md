@@ -7,18 +7,6 @@ Proyek ini bertujuan memprediksi nilai kapasitas maksimal oksigen (VO2 Max) sese
 
 ---
 
-Readme Hugging face:
----
-title: PROYEK PREDIKSI VO2 MAX
-emoji: 🏃‍♂️
-colorFrom: yellow
-colorTo: indigo
-sdk: streamlit
-app_file: app.py
-pinned: false
-license: apache-2.0
----
-
 Check out the configuration reference at https://huggingface.co/docs/hub/spaces-config-reference
 
 
