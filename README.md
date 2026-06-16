@@ -186,5 +186,6 @@ Model telah di-deploy menggunakan **Streamlit** di environment **Hugging Face Sp
 
 <img width="931" height="373" alt="Cuplikan layar 2026-06-16 133814" src="https://github.com/user-attachments/assets/31f8e5e0-3b3b-4298-8df0-5239a4ea200c" />
 
+---
 
 > ⚠️ **Disclaimer:** Aplikasi web ini dibuat semata-mata untuk tujuan demonstrasi akademis dan proyek portfolio (UAS Machine Learning). Hasil estimasi VO2 Max tidak dapat menggantikan pengukuran uji klinis dan tidak ditujukan untuk diagnosis atau saran medis.
