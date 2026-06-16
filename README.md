@@ -168,7 +168,8 @@ Hasil pengujian model terhadap data testing:
 
 ### Feature Importance
 
-> 📸 *[Tambahkan screenshot grafik Feature Importance dari output notebook di sini]*
+> 📸 <img width="557" height="336" alt="image" src="https://github.com/user-attachments/assets/7c4035bb-f18e-483d-99c6-29f62f4dd0ca" />
+
 
 ### Analisis Hasil
 
