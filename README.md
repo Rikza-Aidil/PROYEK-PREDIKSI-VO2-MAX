@@ -188,7 +188,8 @@ Beberapa langkah perbaikan yang dapat dilakukan pada pengembangan selanjutnya:
 
 Model telah di-deploy menggunakan **Streamlit** di environment **Hugging Face Spaces**. Aplikasi menerima input pengguna secara real-time, melakukan transformasi data di latar belakang menggunakan `vo2max_scaler.pkl` dan `feature_columns.pkl`, lalu langsung memberikan output estimasi VO2 Max.
 
-> 📸 *[Tambahkan screenshot tampilan aplikasi Streamlit di sini]*
+> <img width="931" height="373" alt="image" src="https://github.com/user-attachments/assets/75401120-451f-4701-8a3e-e4845baec4cf" />
+
 
 ### Cara Menjalankan Lokal
 
