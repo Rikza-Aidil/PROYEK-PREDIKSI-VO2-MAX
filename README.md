@@ -22,13 +22,14 @@ Check out the configuration reference at https://huggingface.co/docs/hub/spaces-
 ## 📂 Struktur Repositori
 
 ```
-├── app.py                          # Aplikasi antarmuka web Streamlit
-├── PROYEK_PREDIKSI_VO2_MAX.ipynb   # Notebook pemodelan (Eksplorasi & Pelatihan)
-├── vo2max_xgboost_model.pkl        # Model XGBoost hasil training
-├── vo2max_scaler.pkl               # Scaler untuk standardisasi data (StandardScaler)
-├── feature_columns.pkl             # Daftar 17 urutan kolom fitur
-├── requirements.txt                # Dependency library
-└── README.md                       # Laporan proyek
+├── app.py                              # Aplikasi antarmuka web Streamlit
+├── PROYEK_PREDIKSI_VO2_MAX.ipynb       # Notebook pemodelan (Eksplorasi & Pelatihan)
+├── vo2max_xgboost_model.pkl            # Model XGBoost hasil training
+├── vo2max_scaler.pkl                   # Scaler untuk standardisasi data (StandardScaler)
+├── feature_columns.pkl                 # Daftar 17 urutan kolom fitur
+├── requirements.txt                    # Dependency library
+├── fitness_workout_dataset_3800_rows   # Dataset
+└── README.md                           # Laporan proyek
 ```
 
 ---
