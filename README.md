@@ -169,13 +169,6 @@ Hasil pengujian model terhadap data testing:
 
 Model menghasilkan tingkat kesalahan absolut rata-rata (MAE) sebesar **~7.75 mL/kg/min** dari nilai VO2 Max sebenarnya. Namun, nilai R² yang bernilai negatif (-0.0901) mengindikasikan bahwa model belum optimal dalam menangkap pola dari data.
 
-Beberapa langkah perbaikan yang dapat dilakukan pada pengembangan selanjutnya:
-
-- **Hyperparameter Tuning** menggunakan `GridSearchCV` atau `Optuna`
-- **Feature Engineering** lanjutan untuk menambah fitur turunan yang lebih informatif
-- Identifikasi dan penanganan **outlier** yang mungkin mendistorsi proses pelatihan
-- Eksplorasi model alternatif seperti **Random Forest Regressor** atau **LightGBM**
-
 ---
 
 ## 6. Deployment
